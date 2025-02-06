@@ -36,7 +36,6 @@ const SeminarList: React.FC<SeminarListProps> = ({ seminars }) => {
          .catch((error) => {
             console.error('Ошибка запроса на сервер:', error);
          });
-      window.location.reload();
    };
    // тут мы обновляем список семинаров и обновим страницу для отображения
    const handleEditSeminar = (updatedSeminar: Seminar) => {
@@ -45,12 +44,11 @@ const SeminarList: React.FC<SeminarListProps> = ({ seminars }) => {
             seminar.id === updatedSeminar.id ? updatedSeminar : seminar
          )
       );
-      window.location.reload();
    };
 
    return (
       <div className={st.seminarList}>
-         {seminars.map((seminar) => (
+         {seminarsList.map((seminar) => (
             <SeminarCard key={seminar.id} seminar={seminar} onDelete={handleDeleteSeminar} onEdit={handleEditSeminar} />
          ))}
       </div>

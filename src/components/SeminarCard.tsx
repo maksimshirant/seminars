@@ -48,7 +48,7 @@ const SeminarCard: React.FC<SeminarCardProps> = ({ seminar, onDelete, onEdit }) 
    return (
       <div className={st.seminarCard}>
          <div className={st.contentBox}>
-            <div className={st.seminarImageBox}><img className={st.seminarImage} src={seminar.photo} alt={seminar.title} /></div>
+            <div className={st.seminarImageBox}><img loading="lazy" className={st.seminarImage} src={seminar.photo} alt={seminar.title} /></div>
             <div>
                <h2 >{seminar.title}</h2>
                <p >{seminar.description}</p>

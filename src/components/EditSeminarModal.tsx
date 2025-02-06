@@ -47,7 +47,6 @@ const EditSeminarModal: React.FC<EditSeminarModalProps> = ({
          .catch((error) => {
             console.error("Ошибка при редактировании семинара:", error);
          });
-      window.location.reload();
    };
 
    if (!isVisible) return null;

@@ -33,12 +33,8 @@ app.get('/api/seminars', (req, res) => {
 app.delete('/api/seminars/:id', (req, res) => {
    const seminarId = req.params.id;
    const seminars = getSeminars();
-
-
    const updatedSeminars = seminars.filter(seminar => seminar.id !== parseInt(seminarId));
-
    fs.writeFileSync(filePath, JSON.stringify({ seminars: updatedSeminars }, null, 2));
-
    res.status(200).send({ message: 'Семинар успешно удален' });
 });
 app.put('/api/seminars/:id', (req, res) => {
