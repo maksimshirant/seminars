@@ -14,22 +14,12 @@ interface Seminar {
 
 const App = () => {
    const [seminars, setSeminars] = useState<Seminar[]>([]);
-   // получаем список семинаров и кэшируем фото чтобы быстрее загрузка была
+
    useEffect(() => {
       axios
          .get<Seminar[]>("http://localhost:1010/api/seminars")
          .then((response) => {
             const seminarData = response.data;
-            seminarData.forEach((seminar) => {
-               const imageUrl = seminar.photo;
-               if (!localStorage.getItem(imageUrl)) {
-                  const img = new Image();
-                  img.src = imageUrl;
-                  img.onload = () => {
-                     localStorage.setItem(imageUrl, img.src);
-                  };
-               }
-            });
             setSeminars(seminarData);
          })
          .catch((error: any) => {
