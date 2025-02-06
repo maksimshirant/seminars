@@ -1,4 +1,4 @@
-// Modal.tsx
+
 import React, { useEffect } from 'react';
 import st from './style/modal.module.scss'
 import Button from './Button';
