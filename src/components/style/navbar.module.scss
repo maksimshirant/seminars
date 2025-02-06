@@ -1,0 +1,29 @@
+.navbar {
+   background-color: #3b3b3b;
+   color: white;
+   padding: 50px 40px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   border-bottom: 2px solid #f7f7f7;
+}
+
+.greeting {
+   text-align: center;
+   margin-bottom: 20px;
+}
+
+.greeting h1 {
+   font-size: 36px;
+   font-weight: 600;
+   margin: 0;
+   color: #ff8c00;
+}
+
+.greeting p {
+   font-size: 18px;
+   font-weight: 300;
+   margin-top: 10px;
+   color: #f7f7f7;
+}

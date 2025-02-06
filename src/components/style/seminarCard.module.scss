@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+   font-family: 'Poppins', sans-serif;
+}
+
+.seminarCard {
+   background: white;
+   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+   overflow: hidden;
+   transition: transform 0.3s ease-in-out;
+   display: flex;
+   align-items: center;
+   margin: 10px 20px;
+   width: 90%;
+   padding: 10px 20px;
+   justify-content: space-between;
+}
+
+.contentBox {
+   display: flex;
+}
+
+
+
+.seminarImage {
+   border-radius: 50px;
+   width: 100px;
+   height: 100px;
+}
+
+.seminarImageBox {
+   padding: 0 40px;
+}
+
+.seminarContent {
+   padding: 5px;
+}
+
+.seminarTitle {
+   font-size: 1.5rem;
+   color: #333;
+   margin-bottom: 10px;
+}
+
+.seminarDescription {
+   font-size: 1rem;
+   color: #666;
+   margin-bottom: 10px;
+}
+
+.seminarDate {
+   font-size: 0.9rem;
+   color: #888;
+
+}
